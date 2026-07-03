@@ -1,0 +1,11 @@
+index=botsv3
+| stats count
+
+index=botsv3
+| stats count by sourcetype
+| sort - count
+
+index=botsv3
+| stats count by host
+| search host="*FYODOR*" OR host="*fyodor*"
+| sort - count
