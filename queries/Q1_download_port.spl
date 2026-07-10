@@ -1,0 +1,9 @@
+index=botsv3 host="FYODOR-L"
+sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational"
+"<EventID>3</EventID>"
+| rex field=_raw "Data Name=['\"]DestinationPort['\"]>(?<DestinationPort>\d+)<"
+| rex field=_raw "Data Name=['\"]DestinationIp['\"]>(?<DestinationIp>[^<]+)<"
+| rex field=_raw "Data Name=['\"]Image['\"]>(?<Image>[^<]+)<"
+| search DestinationPort=3333
+| table _time host DestinationPort DestinationIp Image
+| sort _time
