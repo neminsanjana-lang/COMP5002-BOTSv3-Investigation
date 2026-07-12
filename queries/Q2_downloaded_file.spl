@@ -1,0 +1,3 @@
+index=botsv3 sourcetype="stream:http" dest_port=3333
+| table _time src_ip dest_ip dest_port http_method uri_path
+| sort _time
