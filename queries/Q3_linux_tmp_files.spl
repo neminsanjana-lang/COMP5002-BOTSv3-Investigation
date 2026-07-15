@@ -1,0 +1,6 @@
+index=botsv3 host="hoth" sourcetype="osquery:results"
+name="pack_fim_file_events"
+("colonel" OR "definitelydontinvestigatethisfile")
+| spath
+| table _time columns.action columns.target_path
+| sort _time
