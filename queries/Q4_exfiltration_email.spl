@@ -1,0 +1,5 @@
+index=botsv3 sourcetype="stream:smtp"
+"ghoppy@froth.ly" "hyunki1984@naver.com"
+| spath
+| search content{}="*customers*"
+| table _time sender_email receiver_email{} subject content{} attach_filename{}
