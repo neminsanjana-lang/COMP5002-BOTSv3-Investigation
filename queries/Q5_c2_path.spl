@@ -1,0 +1,6 @@
+index=botsv3
+sourcetype="wineventlog:microsoft-windows-powershell/operational"
+(host="ABUNGST-L" OR host="FYODOR-L")
+("/admin/get.php" OR "admin/get.php")
+| table _time host EventCode Message _raw
+| sort _time
