@@ -1,0 +1,5 @@
+index=botsv3
+sourcetype="wineventlog:microsoft-windows-powershell/operational"
+"/admin/get.php"
+| stats count by host
+| sort host
