@@ -236,5 +236,4 @@ Several practical improvements follow. Detection should combine PowerShell with 
 
 ChatGPT was used to help organise the report structure. Splunk installation, searches, validation, interpretation and screenshot selection were completed by the student. Responsibility for the final technical conclusions remains with the student.
 
-**Student signature:** ______________________________  
-**Date:** __________________
+
